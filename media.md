@@ -63,8 +63,8 @@ permalink: /media/
 
     <div class="media-item">
         <h3>Constellation</h3>
-        <p class="media-caption">Essay cluster topology in 2D projection.</p>
-        <img src="{{ '/assets/visual/constellation.png' | relative_url }}" alt="Essay constellation diagram">
+        <p class="media-caption">The family, as a constellation. Clayton, Shawna, Dorian, Finnley on the way, Dino, me — the people this work is for and with.</p>
+        <img src="{{ '/assets/visual/constellation.png' | relative_url }}" alt="Family constellation">
     </div>
 
     <div class="media-item">
