@@ -1,0 +1,205 @@
+:root {
+    --bg: #0a0a0b;
+    --text: #e0e0e0;
+    --accent: #6b7280;
+    --highlight: #9ca3af;
+    --featured-bg: rgba(107, 114, 128, 0.15);
+    --featured-border: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    color: var(--highlight);
+}
+
+.tagline {
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--highlight);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--highlight);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.quiet {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+a {
+    color: var(--highlight);
+    text-decoration: underline;
+    text-decoration-color: rgba(156, 163, 175, 0.3);
+}
+
+a:hover {
+    color: #fff;
+    text-decoration-color: #fff;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.featured {
+    background: var(--featured-bg);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 2px solid var(--featured-border);
+}
+
+.featured-title {
+    color: var(--highlight);
+    font-weight: bold;
+}
+
+.new-tag {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.5; }
+}
+
+footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--accent);
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Essay-specific */
+
+.essay-meta {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+article h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: 2rem;
+}
+
+article em {
+    color: var(--accent);
+}
+
+article strong {
+    color: var(--highlight);
+}
+
+article blockquote {
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--accent);
+    font-style: italic;
+}
+
+article hr {
+    border: none;
+    border-top: 1px solid var(--accent);
+    margin: 2rem 0;
+    opacity: 0.5;
+}
+
+article code {
+    background: rgba(107, 114, 128, 0.15);
+    padding: 0.1rem 0.3rem;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+
+article pre {
+    background: rgba(107, 114, 128, 0.1);
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-left: 2px solid var(--accent);
+}
+
+article pre code {
+    background: none;
+    padding: 0;
+}
+
+.nav-back {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.essay-index {
+    list-style: none;
+    margin-left: 0;
+}
+
+.essay-index li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.essay-index .date {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-right: 0.75rem;
+}

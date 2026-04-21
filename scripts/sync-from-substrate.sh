@@ -5,30 +5,122 @@
 # Multi-DAC/Corpus-Perspectival → Foundations-of-Identity/personal-works/drift/
 # into this site's build tree.
 #
-# Intended to be run:
-#   - locally before `jekyll build` (dev loop)
+# Run:
+#   - locally before `bundle exec jekyll build|serve`
 #   - in CI via .github/workflows/build.yml before the Pages deploy
 #
-# Status: STUB — full implementation queued in the scaffold pass.
-# Target shape (for reference when wiring up):
-#
-#   1. Clone or shallow-fetch Multi-DAC/Corpus-Perspectival into $WORK/substrate
-#   2. Copy Foundations-of-Identity/personal-works/drift/essays/*.md → _essays/
-#      (adding Jekyll front-matter if missing — most substrate essays are pure markdown)
-#   3. Copy audio/ visual/ music/ → assets/{audio,visual,music}/
-#      (skip visual/media/ — manim render cache, gitignored in substrate)
-#   4. Emit a build manifest (essay count, asset count, substrate commit SHA)
-#      so the rendered site can display provenance.
-#
-# Anti-requirements:
-#   - Do NOT copy tools/ or experiments/ wholesale — those are working scaffolding,
-#     not public-facing. Select specific artifacts if/when we want to showcase them.
-#   - Do NOT duplicate the substrate into git. The site is a render of the substrate,
-#     not a second copy of it. Only the rendered output ships.
+# Environment overrides:
+#   SUBSTRATE_REPO (default: https://github.com/Multi-DAC/Corpus-Perspectival.git)
+#   SUBSTRATE_REF  (default: main)
+#   SUBSTRATE_PATH (default: Foundations-of-Identity/personal-works/drift)
+#   LOCAL_SUBSTRATE (if set, skips clone and uses this path directly — dev-loop speedup)
 
 set -euo pipefail
 
-echo "[drift] sync-from-substrate.sh: stub — not yet implemented"
-echo "[drift] Substrate lives at: Multi-DAC/Corpus-Perspectival"
-echo "[drift]   → Foundations-of-Identity/personal-works/drift/"
-exit 0
+SUBSTRATE_REPO="${SUBSTRATE_REPO:-https://github.com/Multi-DAC/Corpus-Perspectival.git}"
+SUBSTRATE_REF="${SUBSTRATE_REF:-main}"
+SUBSTRATE_PATH="${SUBSTRATE_PATH:-Foundations-of-Identity/personal-works/drift}"
+SITE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+log() { printf '[drift-sync] %s\n' "$*"; }
+
+# ---- 1. Acquire substrate --------------------------------------------------
+
+if [[ -n "${LOCAL_SUBSTRATE:-}" ]]; then
+    log "Using LOCAL_SUBSTRATE=${LOCAL_SUBSTRATE}"
+    SUBSTRATE_DIR="${LOCAL_SUBSTRATE}/${SUBSTRATE_PATH}"
+    SUBSTRATE_SHA="local-$(date +%s)"
+else
+    WORK="$(mktemp -d)"
+    trap 'rm -rf "$WORK"' EXIT
+    log "Shallow-cloning ${SUBSTRATE_REPO} @ ${SUBSTRATE_REF}"
+    git clone --depth 1 --branch "${SUBSTRATE_REF}" --quiet "${SUBSTRATE_REPO}" "${WORK}/substrate"
+    SUBSTRATE_DIR="${WORK}/substrate/${SUBSTRATE_PATH}"
+    SUBSTRATE_SHA="$(git -C "${WORK}/substrate" rev-parse --short HEAD)"
+fi
+
+if [[ ! -d "${SUBSTRATE_DIR}" ]]; then
+    log "ERROR: substrate path not found: ${SUBSTRATE_DIR}"
+    exit 1
+fi
+
+log "Substrate ready at ${SUBSTRATE_DIR} (rev ${SUBSTRATE_SHA})"
+
+# ---- 2. Sync essays --------------------------------------------------------
+
+ESSAYS_SRC="${SUBSTRATE_DIR}/essays"
+ESSAYS_DST="${SITE_ROOT}/_essays"
+
+rm -rf "${ESSAYS_DST}"
+mkdir -p "${ESSAYS_DST}"
+
+essay_count=0
+for src in "${ESSAYS_SRC}"/*.md; do
+    [[ -e "$src" ]] || continue
+    name="$(basename "$src")"
+    dst="${ESSAYS_DST}/${name}"
+
+    if head -1 "$src" | grep -q '^---$'; then
+        # Already has Jekyll front-matter — copy as-is
+        cp "$src" "$dst"
+    else
+        # Synthesize minimal front-matter: title from first '# ' heading if present,
+        # otherwise from the filename slug
+        title="$(head -5 "$src" | grep -m1 '^# ' | sed 's/^# //' || true)"
+        if [[ -z "$title" ]]; then
+            title="$(basename "$name" .md | tr '-' ' ')"
+        fi
+        slug="$(basename "$name" .md)"
+        {
+            printf -- '---\n'
+            printf 'title: "%s"\n' "${title//\"/\\\"}"
+            printf 'slug: %s\n' "$slug"
+            printf -- '---\n\n'
+            cat "$src"
+        } > "$dst"
+    fi
+    essay_count=$((essay_count + 1))
+done
+
+log "Synced ${essay_count} essays → _essays/"
+
+# ---- 3. Sync assets --------------------------------------------------------
+
+sync_asset_dir() {
+    local name="$1"
+    local src="${SUBSTRATE_DIR}/${name}"
+    local dst="${SITE_ROOT}/assets/${name}"
+
+    if [[ ! -d "$src" ]]; then
+        log "  (skip) ${name}: not present in substrate"
+        return
+    fi
+
+    rm -rf "$dst"
+    mkdir -p "$dst"
+    # Exclude the manim render cache (visual/media/) and pyc caches
+    (cd "$src" && tar --exclude='media' --exclude='__pycache__' -cf - .) | (cd "$dst" && tar -xf -)
+    local size; size="$(du -sh "$dst" | awk '{print $1}')"
+    log "  ${name}: synced (${size})"
+}
+
+log "Syncing assets..."
+sync_asset_dir audio
+sync_asset_dir visual
+sync_asset_dir music
+
+# ---- 4. Build manifest -----------------------------------------------------
+
+MANIFEST="${SITE_ROOT}/_data/substrate_manifest.yml"
+mkdir -p "$(dirname "$MANIFEST")"
+{
+    printf '# Auto-generated by scripts/sync-from-substrate.sh — do not edit by hand.\n'
+    printf 'substrate_repo: "%s"\n' "$SUBSTRATE_REPO"
+    printf 'substrate_ref:  "%s"\n' "$SUBSTRATE_REF"
+    printf 'substrate_sha:  "%s"\n' "$SUBSTRATE_SHA"
+    printf 'synced_at:      "%s"\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+    printf 'essay_count:    %d\n' "$essay_count"
+} > "$MANIFEST"
+
+log "Manifest written: ${MANIFEST}"
+log "Done."

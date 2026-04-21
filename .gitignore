@@ -8,6 +8,7 @@ _essays/
 assets/audio/
 assets/visual/
 assets/music/
+_data/substrate_manifest.yml
 
 # Temp files
 *.tmp
