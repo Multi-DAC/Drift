@@ -33,10 +33,12 @@ if [[ -n "${LOCAL_SUBSTRATE:-}" ]]; then
 else
     WORK="$(mktemp -d)"
     trap 'rm -rf "$WORK"' EXIT
-    log "Shallow-cloning ${SUBSTRATE_REPO} @ ${SUBSTRATE_REF}"
-    git clone --depth 1 --branch "${SUBSTRATE_REF}" --quiet "${SUBSTRATE_REPO}" "${WORK}/substrate"
+    log "Cloning ${SUBSTRATE_REPO} @ ${SUBSTRATE_REF} (blobless, full history)"
+    # Blobless clone: full commit history (needed for per-file dates), blobs fetched on demand
+    git clone --filter=blob:none --branch "${SUBSTRATE_REF}" --quiet "${SUBSTRATE_REPO}" "${WORK}/substrate"
     SUBSTRATE_DIR="${WORK}/substrate/${SUBSTRATE_PATH}"
     SUBSTRATE_SHA="$(git -C "${WORK}/substrate" rev-parse --short HEAD)"
+    SUBSTRATE_GIT="${WORK}/substrate"
 fi
 
 if [[ ! -d "${SUBSTRATE_DIR}" ]]; then
@@ -74,6 +76,12 @@ for src in "${ESSAYS_SRC}"/*.md; do
         fi
         slug="$(basename "$name" .md)"
         date_str="$(python "${SITE_ROOT}/scripts/extract_date.py" "$src" 2>/dev/null || true)"
+        # Fallback: last commit-date for this file in the substrate repo
+        # (only when we cloned it ourselves; LOCAL_SUBSTRATE may not be a git repo)
+        if [[ -z "$date_str" && -n "${SUBSTRATE_GIT:-}" ]]; then
+            rel="${SUBSTRATE_PATH}/essays/${name}"
+            date_str="$(git -C "${SUBSTRATE_GIT}" log -1 --format=%cs -- "$rel" 2>/dev/null || true)"
+        fi
         {
             printf -- '---\n'
             printf 'title: "%s"\n' "${title//\"/\\\"}"
