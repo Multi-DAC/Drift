@@ -25,12 +25,7 @@ title: Drift
 
 <h2>Other work</h2>
 
-<ul>
-    <li><strong>Audio</strong> — read-alouds and sonic experiments (coming to the site as the asset sync lands)</li>
-    <li><strong>Visual</strong> — diagrams, manim animations, bridge-network visualizations</li>
-    <li><strong>Music</strong> — personal compositions</li>
-    <li><strong>Experiments</strong> — navigation trials and substrate probes</li>
-</ul>
+<p><a href="{{ '/media/' | relative_url }}">Media →</a> — music, visual, and cellular-automata sonifications rendered from the research.</p>
 
 <h2>What this is</h2>
 

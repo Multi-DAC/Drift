@@ -203,3 +203,43 @@ article pre code {
     font-size: 0.85rem;
     margin-right: 0.75rem;
 }
+
+/* Media grid */
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.media-item {
+    border-left: 2px solid var(--accent);
+    padding: 0.75rem 1rem;
+    background: rgba(107, 114, 128, 0.08);
+}
+
+.media-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.media-caption {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.media-item audio {
+    width: 100%;
+    margin-top: 0.25rem;
+    filter: invert(0.85) hue-rotate(180deg);
+}
+
+.media-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(107, 114, 128, 0.3);
+}
