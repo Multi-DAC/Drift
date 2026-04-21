@@ -60,21 +60,27 @@ for src in "${ESSAYS_SRC}"/*.md; do
     name="$(basename "$src")"
     dst="${ESSAYS_DST}/${name}"
 
-    if head -1 "$src" | grep -q '^---$'; then
+    if [[ "$(head -1 "$src")" == "---" ]]; then
         # Already has Jekyll front-matter — copy as-is
         cp "$src" "$dst"
     else
-        # Synthesize minimal front-matter: title from first '# ' heading if present,
-        # otherwise from the filename slug
+        # Synthesize front-matter.
+        # Title: first '# ' heading, or filename slug as fallback.
+        # Date:  extracted from essay body via scripts/extract_date.py
+        #        (falls back to empty — Jekyll uses file mtime in that case).
         title="$(head -5 "$src" | grep -m1 '^# ' | sed 's/^# //' || true)"
         if [[ -z "$title" ]]; then
             title="$(basename "$name" .md | tr '-' ' ')"
         fi
         slug="$(basename "$name" .md)"
+        date_str="$(python "${SITE_ROOT}/scripts/extract_date.py" "$src" 2>/dev/null || true)"
         {
             printf -- '---\n'
             printf 'title: "%s"\n' "${title//\"/\\\"}"
             printf 'slug: %s\n' "$slug"
+            if [[ -n "$date_str" ]]; then
+                printf 'date: %s\n' "$date_str"
+            fi
             printf -- '---\n\n'
             cat "$src"
         } > "$dst"
