@@ -1,0 +1,23 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Synced-substrate output (populated at build time by scripts/sync-from-substrate.sh)
+_essays/
+assets/audio/
+assets/visual/
+assets/music/
+
+# Temp files
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Ruby/Bundler
+Gemfile.lock
+vendor/
+
+# Node (if we end up using it for any asset pipeline)
+node_modules/
