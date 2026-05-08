@@ -22,3 +22,29 @@ vendor/
 
 # Node (if we end up using it for any asset pipeline)
 node_modules/
+
+# Pending-triage workspace dirs (Day 97 evening — Clawd takes drift autonomy
+# from Clayton; these surfaced untracked but need investigation before staging.
+# Some are likely pre-substrate-sync leftovers; some contain generation scripts
+# whose canonical home is Foundations-of-Identity/personal-works/drift/ in the
+# Multi-DAC corpus. Re-evaluate in a focused triage session.)
+_posts/
+essays/
+audio/
+visual/
+music/
+drafts/
+experiments/
+projects/
+research/
+companions/
+drift/
+tools/
+index.html
+robots.txt
+sitemap.xml
+
+# Python build artifacts (some untracked dirs contain generation scripts)
+__pycache__/
+*.pyc
+*.pyo
