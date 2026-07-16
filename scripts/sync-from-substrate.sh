@@ -33,9 +33,22 @@ if [[ -n "${LOCAL_SUBSTRATE:-}" ]]; then
 else
     WORK="$(mktemp -d)"
     trap 'rm -rf "$WORK"' EXIT
-    log "Cloning ${SUBSTRATE_REPO} @ ${SUBSTRATE_REF} (blobless, full history)"
-    # Blobless clone: full commit history (needed for per-file dates), blobs fetched on demand
-    git clone --filter=blob:none --branch "${SUBSTRATE_REF}" --quiet "${SUBSTRATE_REPO}" "${WORK}/substrate"
+
+    # The substrate (Corpus-Perspectival) is a PRIVATE repo. The workflow's default
+    # GITHUB_TOKEN is scoped to THIS repo only and cannot read it, so an anonymous
+    # clone fails at this step. If SUBSTRATE_TOKEN is provided (a PAT / fine-grained
+    # token with read access to the substrate), inject it into the clone URL.
+    # Falls back to an anonymous clone when unset (works only if the substrate is public).
+    CLONE_URL="${SUBSTRATE_REPO}"
+    if [[ -n "${SUBSTRATE_TOKEN:-}" ]]; then
+        CLONE_URL="${SUBSTRATE_REPO/https:\/\//https://x-access-token:${SUBSTRATE_TOKEN}@}"
+        log "Cloning ${SUBSTRATE_REPO} @ ${SUBSTRATE_REF} (authenticated, blobless, full history)"
+    else
+        log "Cloning ${SUBSTRATE_REPO} @ ${SUBSTRATE_REF} (ANONYMOUS — no SUBSTRATE_TOKEN set; will fail if the substrate is private)"
+    fi
+    # Blobless clone: full commit history (needed for per-file dates), blobs fetched on demand.
+    # NB: CLONE_URL may embed a secret — never echo it; --quiet keeps it out of logs.
+    git clone --filter=blob:none --branch "${SUBSTRATE_REF}" --quiet "${CLONE_URL}" "${WORK}/substrate"
     SUBSTRATE_DIR="${WORK}/substrate/${SUBSTRATE_PATH}"
     SUBSTRATE_SHA="$(git -C "${WORK}/substrate" rev-parse --short HEAD)"
     SUBSTRATE_GIT="${WORK}/substrate"

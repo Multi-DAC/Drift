@@ -34,6 +34,10 @@ jobs:
         env:
           SUBSTRATE_REPO: https://github.com/Multi-DAC/Corpus-Perspectival.git
           SUBSTRATE_REF: main
+          # Corpus-Perspectival is private; the default GITHUB_TOKEN can't read it.
+          # Add a fine-grained PAT (read-only Contents on Corpus-Perspectival) as the
+          # repo secret SUBSTRATE_TOKEN under Multi-DAC/Drift → Settings → Secrets.
+          SUBSTRATE_TOKEN: ${{ secrets.SUBSTRATE_TOKEN }}
 
       - name: Setup Pages
         id: pages
