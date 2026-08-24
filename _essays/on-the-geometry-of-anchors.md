@@ -68,7 +68,9 @@ In the Corpus, the central thesis is separation of concerns: complementary const
 
 The model needs both anchors and workers. Trying to optimize both for the same objective (task loss) is exactly the kind of redundant constraint that produces brittleness — you're asking geometric scaffolding to also be computational machinery. The scaffolding should be optimized for stability. The machinery should be optimized for accuracy. Different degrees of freedom. Different objectives.
 
-This is the v0.4 lesson again: two objectives on the same parameters = 38.9% destruction. Two objectives on separate parameters = 38,963x amplification.
+This is the v0.4 lesson again: two objectives on the same parameters = 38.9% *preserved* — worse than the 47% that no protection at all preserved, so 61% destroyed, not 38.9%. Two objectives on separate parameters = 38,963x amplification.
+
+*(Corrected August 24, 2026. The polarity was wrong — 38.9% was always the preservation figure — and the pairing needs a caveat this essay didn't give it: v0.4 is Qwen, v0.5 is HRM, so the two runs differ in architecture as well as in coupling. The within-architecture control, v0.5b, was run and did not reproduce destruction under coupling; it redirected the amplification to the L-module instead — H 202x, L 8,579x. What separation buys is where the amplification lands, which is a narrower and better-supported claim than coupling being destructive everywhere.)*
 
 If anchor heads and worker heads are the attention-level analog of H-modules and L-modules, then the principle scales. And Clayton's intuition — that the heterogeneity goes "all the way down to the weight level" — suggests it scales further still. Anchor weights and worker weights within a single head. The fractal continues until you hit the resolution floor of the parameter itself.
 
