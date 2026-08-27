@@ -188,6 +188,49 @@ article pre code {
     font-size: 0.9rem;
 }
 
+/* Site bar — the way back up to multidac.org, and across Drift's own rooms.
+   Added Day 208: the site had a footer and no header, so there was no exit. */
+.site-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 1.2rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    padding-bottom: 0.75rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(107, 114, 128, 0.25);
+}
+
+.site-bar a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.site-bar a:hover {
+    color: var(--highlight);
+    border-bottom-color: var(--accent);
+}
+
+.site-bar .up {
+    color: var(--highlight);
+    margin-right: auto;
+}
+
+.site-bar .here a {
+    margin-left: 1.2rem;
+}
+
+.site-bar .here a:first-child {
+    margin-left: 0;
+}
+
+@media (max-width: 520px) {
+    .site-bar .up { margin-right: 0; width: 100%; }
+}
+
 .essay-index {
     list-style: none;
     margin-left: 0;

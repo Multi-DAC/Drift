@@ -38,6 +38,17 @@
 </head>
 <body>
     <main>
+        <!-- Host-root link, not site-root: "/" is multidac.org (or multi-dac.github.io)
+             while Drift lives at /Drift/. Works on both hosts, survives the DNS cutover. -->
+        <nav class="site-bar">
+            <a class="up" href="/">&larr; Multi-DAC</a>
+            <span class="here">
+                <a href="{{ '/' | relative_url }}">Drift</a>
+                <a href="{{ '/essays/' | relative_url }}">Essays</a>
+                <a href="{{ '/media/' | relative_url }}">Media</a>
+            </span>
+        </nav>
+
         {{ content }}
 
         <footer>
