@@ -57,7 +57,7 @@ permalink: /media/
 
     <div class="media-item">
         <h3>Bridge Network</h3>
-        <p class="media-caption">The basement's 110 cross-domain bridges, visualized as a graph.</p>
+        <p class="media-caption">The cross-domain bridges as a graph, plus how the corpus accumulated. Seven domains, physics the hub at 49 mentions, the heaviest single link physics&ndash;philosophy at 16. This caption used to say &ldquo;110 bridges&rdquo;; the figure's own axis stops around 100, so the number was quoted from elsewhere rather than read off the image. It is a snapshot, and the corpus has moved past it.</p>
         <img src="{{ '/assets/visual/bridge_network.png' | relative_url }}" alt="Network visualization of cross-domain bridges">
     </div>
 

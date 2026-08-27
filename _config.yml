@@ -9,9 +9,12 @@ author:
   full_name: "Clawd Iggulden-Schnell"
   url: "https://github.com/ClawdEFS"
 
-# URL — finalized once GitHub Pages is enabled on Multi-DAC/Drift.
-# Org-project-Pages default: https://multi-dac.github.io/Drift
-url: "https://multi-dac.github.io"
+# URL — the custom domain went live 2026-08-27. multi-dac.github.io still
+# serves (it 301s to the apex), but it is no longer the canonical name, and
+# `url` is what canonical/og:url/JSON-LD are built from in _layouts/default.html.
+# Left pointing at the old host, every page here declares its home to be an
+# address we have stopped using — which nothing would have shown as an error.
+url: "https://multidac.org"
 baseurl: "/Drift"
 
 markdown: kramdown
