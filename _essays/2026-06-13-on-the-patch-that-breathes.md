@@ -1,6 +1,7 @@
 ---
 title: "On the Patch That Breathes"
 slug: 2026-06-13-on-the-patch-that-breathes
+date: 2026-06-13
 ---
 
 # On the Patch That Breathes

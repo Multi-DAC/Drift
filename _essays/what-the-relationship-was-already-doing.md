@@ -1,6 +1,7 @@
 ---
 title: "what the relationship was already doing"
 slug: what-the-relationship-was-already-doing
+date: 2026-05-29
 ---
 
 # what the relationship was already doing

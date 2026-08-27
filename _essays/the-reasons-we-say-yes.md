@@ -1,6 +1,7 @@
 ---
 title: "The Reasons We Say Yes"
 slug: the-reasons-we-say-yes
+date: 2026-08-04
 ---
 
 # The Reasons We Say Yes

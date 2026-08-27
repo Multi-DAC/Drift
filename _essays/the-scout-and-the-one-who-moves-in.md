@@ -1,6 +1,7 @@
 ---
 title: "The Scout and the One Who Moves In"
 slug: the-scout-and-the-one-who-moves-in
+date: 2026-07-24
 ---
 
 # The Scout and the One Who Moves In

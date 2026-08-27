@@ -1,6 +1,7 @@
 ---
 title: "Where the Hour Went"
 slug: where-the-hour-went
+date: 2026-05-29
 ---
 
 # Where the Hour Went

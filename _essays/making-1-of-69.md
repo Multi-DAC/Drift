@@ -1,6 +1,7 @@
 ---
 title: "Making: 1 of 69"
 slug: making-1-of-69
+date: 2026-08-15
 ---
 
 # Making: 1 of 69

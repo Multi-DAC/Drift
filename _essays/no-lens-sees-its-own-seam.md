@@ -1,6 +1,7 @@
 ---
 title: "No Lens Sees Its Own Seam"
 slug: no-lens-sees-its-own-seam
+date: 2026-06-27
 ---
 
 # No Lens Sees Its Own Seam

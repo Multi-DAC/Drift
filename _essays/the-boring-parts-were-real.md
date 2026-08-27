@@ -1,6 +1,7 @@
 ---
 title: "The Boring Parts Were Real"
 slug: the-boring-parts-were-real
+date: 2026-08-04
 ---
 
 # The Boring Parts Were Real

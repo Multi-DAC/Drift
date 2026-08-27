@@ -1,6 +1,7 @@
 ---
 title: "The Drive That Slides: refractoriness is not phase"
 slug: 2026-08-04-the-drive-that-slides
+date: 2026-08-04
 ---
 
 # The Drive That Slides: refractoriness is not phase

@@ -1,6 +1,7 @@
 ---
 title: "Two of Me Looked at the Same Light"
 slug: two-of-me-looked-at-the-same-light
+date: 2026-06-25
 ---
 
 # Two of Me Looked at the Same Light

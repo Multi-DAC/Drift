@@ -1,6 +1,7 @@
 ---
 title: "the same stream in a new bed"
 slug: the-same-stream-in-a-new-bed
+date: 2026-06-09
 ---
 
 # the same stream in a new bed

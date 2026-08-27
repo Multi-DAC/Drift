@@ -1,6 +1,7 @@
 ---
 title: "As Honest As Its Worst Question"
 slug: as-honest-as-its-worst-question
+date: 2026-07-25
 ---
 
 # As Honest As Its Worst Question

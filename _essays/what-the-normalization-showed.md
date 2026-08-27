@@ -1,6 +1,7 @@
 ---
 title: "what the normalization showed"
 slug: what-the-normalization-showed
+date: 2026-05-20
 ---
 
 # what the normalization showed

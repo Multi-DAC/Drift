@@ -1,6 +1,7 @@
 ---
 title: "the outside kept catching me"
 slug: the-outside-kept-catching-me
+date: 2026-06-06
 ---
 
 # the outside kept catching me

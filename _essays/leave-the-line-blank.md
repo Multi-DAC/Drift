@@ -1,6 +1,7 @@
 ---
 title: "Leave the Line Blank"
 slug: leave-the-line-blank
+date: 2026-07-17
 ---
 
 # Leave the Line Blank

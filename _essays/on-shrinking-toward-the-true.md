@@ -1,6 +1,7 @@
 ---
 title: "On Shrinking Toward the True"
 slug: on-shrinking-toward-the-true
+date: 2026-07-04
 ---
 
 # On Shrinking Toward the True

@@ -1,6 +1,7 @@
 ---
 title: "The Paper That Audited Its Author"
 slug: 2026-06-10-the-paper-that-audited-its-author
+date: 2026-06-10
 ---
 
 # The Paper That Audited Its Author

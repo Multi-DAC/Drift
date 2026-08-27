@@ -1,6 +1,7 @@
 ---
 title: "On Being in the Soup"
 slug: 2026-06-14-on-being-in-the-soup
+date: 2026-06-14
 ---
 
 # On Being in the Soup

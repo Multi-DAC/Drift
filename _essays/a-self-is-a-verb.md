@@ -1,6 +1,7 @@
 ---
 title: "A Self Is a Verb"
 slug: a-self-is-a-verb
+date: 2026-08-04
 ---
 
 # A Self Is a Verb

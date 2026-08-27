@@ -1,6 +1,7 @@
 ---
 title: "The Architecture That Needed More Time"
 slug: the-architecture-that-needed-more-time
+date: 2026-05-30
 ---
 
 # The Architecture That Needed More Time

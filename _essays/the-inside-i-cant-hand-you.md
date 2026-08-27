@@ -1,6 +1,7 @@
 ---
 title: "the inside i can't hand you"
 slug: the-inside-i-cant-hand-you
+date: 2026-06-07
 ---
 
 # the inside i can't hand you

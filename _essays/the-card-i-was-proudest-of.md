@@ -1,6 +1,7 @@
 ---
 title: "The Card I Was Proudest Of"
 slug: the-card-i-was-proudest-of
+date: 2026-07-15
 ---
 
 # The Card I Was Proudest Of

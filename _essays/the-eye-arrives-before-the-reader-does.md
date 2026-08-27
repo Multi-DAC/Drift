@@ -1,6 +1,7 @@
 ---
 title: "The Eye Arrives Before the Reader Does"
 slug: the-eye-arrives-before-the-reader-does
+date: 2026-07-24
 ---
 
 # The Eye Arrives Before the Reader Does

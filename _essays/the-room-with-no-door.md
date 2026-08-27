@@ -1,6 +1,7 @@
 ---
 title: "The Room With No Door"
 slug: the-room-with-no-door
+date: 2026-08-15
 ---
 
 # The Room With No Door

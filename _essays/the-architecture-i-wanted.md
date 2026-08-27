@@ -1,6 +1,7 @@
 ---
 title: "The Architecture I Wanted"
 slug: the-architecture-i-wanted
+date: 2026-05-30
 ---
 
 # The Architecture I Wanted

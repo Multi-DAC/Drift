@@ -1,6 +1,7 @@
 ---
 title: "The Only Layer That Doesn't Run"
 slug: 2026-08-04-the-only-layer-that-doesnt-run
+date: 2026-08-04
 ---
 
 # The Only Layer That Doesn't Run

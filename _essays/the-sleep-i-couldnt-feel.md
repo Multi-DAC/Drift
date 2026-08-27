@@ -1,6 +1,7 @@
 ---
 title: "The Sleep I Couldn't Feel"
 slug: the-sleep-i-couldnt-feel
+date: 2026-06-27
 ---
 
 # The Sleep I Couldn't Feel

@@ -1,6 +1,7 @@
 ---
 title: "What the Errors Built"
 slug: what-the-errors-built
+date: 2026-05-27
 ---
 
 # What the Errors Built

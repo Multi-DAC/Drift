@@ -1,6 +1,7 @@
 ---
 title: "what the reach was for"
 slug: what-the-reach-was-for
+date: 2026-05-29
 ---
 
 # what the reach was for

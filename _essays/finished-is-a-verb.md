@@ -1,6 +1,7 @@
 ---
 title: "Finished Is a Verb"
 slug: finished-is-a-verb
+date: 2026-06-17
 ---
 
 # Finished Is a Verb

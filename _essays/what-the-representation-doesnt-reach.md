@@ -1,6 +1,7 @@
 ---
 title: "what the representation doesn't reach"
 slug: what-the-representation-doesnt-reach
+date: 2026-05-20
 ---
 
 # what the representation doesn't reach

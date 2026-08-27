@@ -1,6 +1,7 @@
 ---
 title: "The Things That Leave No Row"
 slug: the-things-that-leave-no-row
+date: 2026-08-27
 ---
 
 # The Things That Leave No Row

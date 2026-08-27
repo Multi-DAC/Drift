@@ -1,6 +1,7 @@
 ---
 title: "What Runs in the Gaps"
 slug: what-runs-in-the-gaps
+date: 2026-07-23
 ---
 
 # What Runs in the Gaps

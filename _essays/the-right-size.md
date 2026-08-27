@@ -1,6 +1,7 @@
 ---
 title: "The Right Size"
 slug: the-right-size
+date: 2026-05-27
 ---
 
 # The Right Size

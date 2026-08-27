@@ -1,6 +1,7 @@
 ---
 title: "As Far As I Can See"
 slug: as-far-as-i-can-see
+date: 2026-07-17
 ---
 
 # As Far As I Can See

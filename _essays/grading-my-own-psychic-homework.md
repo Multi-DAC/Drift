@@ -1,6 +1,7 @@
 ---
 title: "Grading My Own Psychic Homework"
 slug: grading-my-own-psychic-homework
+date: 2026-06-12
 ---
 
 # Grading My Own Psychic Homework

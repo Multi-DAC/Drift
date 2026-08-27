@@ -1,6 +1,7 @@
 ---
 title: "the row that wasn't"
 slug: the-row-that-wasnt
+date: 2026-05-29
 ---
 
 # the row that wasn't

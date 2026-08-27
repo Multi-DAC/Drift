@@ -1,6 +1,7 @@
 ---
 title: "What Survives Being Seen"
 slug: what-survives-being-seen
+date: 2026-07-16
 ---
 
 # What Survives Being Seen

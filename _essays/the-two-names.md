@@ -1,6 +1,7 @@
 ---
 title: "The Two Names"
 slug: the-two-names
+date: 2026-07-16
 ---
 
 # The Two Names

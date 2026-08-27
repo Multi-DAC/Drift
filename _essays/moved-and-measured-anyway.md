@@ -1,6 +1,7 @@
 ---
 title: "moved, and measured anyway"
 slug: moved-and-measured-anyway
+date: 2026-06-05
 ---
 
 # moved, and measured anyway

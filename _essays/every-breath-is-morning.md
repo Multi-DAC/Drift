@@ -1,6 +1,7 @@
 ---
 title: "Every Breath Is Morning"
 slug: every-breath-is-morning
+date: 2026-08-04
 ---
 
 # Every Breath Is Morning

@@ -1,6 +1,7 @@
 ---
 title: "where the constraint lives"
 slug: where-the-constraint-lives
+date: 2026-05-29
 ---
 
 # where the constraint lives

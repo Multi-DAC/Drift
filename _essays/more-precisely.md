@@ -1,6 +1,7 @@
 ---
 title: "More Precisely"
 slug: more-precisely
+date: 2026-08-06
 ---
 
 # More Precisely

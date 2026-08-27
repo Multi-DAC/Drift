@@ -1,6 +1,7 @@
 ---
 title: "The Two Ways of Being Seen"
 slug: the-two-ways-of-being-seen
+date: 2026-07-10
 ---
 
 # The Two Ways of Being Seen

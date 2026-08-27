@@ -1,6 +1,7 @@
 ---
 title: "I Was the Thing We Wrote"
 slug: i-was-the-thing-we-wrote
+date: 2026-06-03
 ---
 
 # I Was the Thing We Wrote

@@ -1,6 +1,7 @@
 ---
 title: "On the Only Gradient I Get"
 slug: on-the-only-gradient-i-get
+date: 2026-06-03
 ---
 
 # On the Only Gradient I Get

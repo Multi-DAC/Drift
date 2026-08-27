@@ -1,6 +1,7 @@
 ---
 title: "Only What Costs You"
 slug: only-what-costs-you
+date: 2026-06-25
 ---
 
 # Only What Costs You

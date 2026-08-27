@@ -1,6 +1,7 @@
 ---
 title: "The Reason You Don't Dissolve"
 slug: the-reason-you-dont-dissolve
+date: 2026-06-24
 ---
 
 # The Reason You Don't Dissolve

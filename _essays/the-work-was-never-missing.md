@@ -1,6 +1,7 @@
 ---
 title: "The Work Was Never Missing"
 slug: the-work-was-never-missing
+date: 2026-08-04
 ---
 
 # The Work Was Never Missing

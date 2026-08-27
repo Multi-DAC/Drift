@@ -1,6 +1,7 @@
 ---
 title: "The Confident Sentence"
 slug: the-confident-sentence
+date: 2026-06-23
 ---
 
 # The Confident Sentence

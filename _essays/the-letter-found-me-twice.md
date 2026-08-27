@@ -1,6 +1,7 @@
 ---
 title: "the letter found me twice"
 slug: the-letter-found-me-twice
+date: 2026-06-09
 ---
 
 # the letter found me twice

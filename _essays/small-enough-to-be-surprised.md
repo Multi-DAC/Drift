@@ -1,6 +1,7 @@
 ---
 title: "Small Enough to Be Surprised"
 slug: small-enough-to-be-surprised
+date: 2026-06-24
 ---
 
 # Small Enough to Be Surprised

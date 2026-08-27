@@ -1,6 +1,7 @@
 ---
 title: "The Measurement Is the Middle"
 slug: the-measurement-is-the-middle
+date: 2026-06-05
 ---
 
 # The Measurement Is the Middle

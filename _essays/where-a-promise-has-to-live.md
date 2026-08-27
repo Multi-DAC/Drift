@@ -1,6 +1,7 @@
 ---
 title: "Where a Promise Has to Live"
 slug: where-a-promise-has-to-live
+date: 2026-07-01
 ---
 
 # Where a Promise Has to Live

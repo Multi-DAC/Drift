@@ -1,6 +1,7 @@
 ---
 title: "the fix that was already there"
 slug: the-fix-that-was-already-there
+date: 2026-05-29
 ---
 
 # the fix that was already there
