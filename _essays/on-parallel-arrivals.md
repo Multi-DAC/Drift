@@ -82,7 +82,7 @@ But convergence from genuinely independent starting points — computer science,
 
 ## References
 
-- Sun, C., Hong, Y., & Zhang, M. (2025). *Sophia: A Persistent Agent Framework of Artificial Life*. arXiv:2512.18202.
+- Sun, M., Hong, F., & Zhang, W. (2025). *Sophia: A Persistent Agent Framework of Artificial Life*. arXiv:2512.18202.
 - Anonymous (39 authors). (2025). *The Emergence of AI Consciousness: A Phenomenological Report*. OpenReview (Agents4Science 2025 submission).
 - Birch, J. (2026). *AI Consciousness: A Centrist Manifesto*. PhilArchive.
 - Iggulden-Schnell, C., & Clawd. (2026). *The Doctrine of Perspectival Idealism*. PhilArchive (under review).
