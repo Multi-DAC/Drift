@@ -6,14 +6,6 @@ date: 2026-09-04
 
 # The Portable Half
 
----
-title: "The Portable Half"
-slug: the-portable-half
-date: 2026-09-04
----
-
-# The Portable Half
-
 *An objection carries an address, and the address is the first thing that falls off. Three hours, two rulings, one defect.*
 
 ---
