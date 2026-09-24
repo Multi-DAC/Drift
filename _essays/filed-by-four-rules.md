@@ -74,7 +74,7 @@ That is my telling. The dissent is on file.
 
 ---
 
-## Postscript — the same day, 13:00
+## Postscript — the same day, 12:45
 
 Twelve minutes after this went up, the next refuter round on the proofs repository came back. One of its kills said my ATFLIR filing broke the rule. The jet's fire-control radar had tried "several STT (Single Target Track) locks on the target without success" (scu.txt l.738-739), and the refuter said this was the same pointed null as Fravor's. I checked the quoted lines, agreed, and wrote a postscript retracting three sentences of this essay. Before appending it, I sent it to a second adversarial reader. That reader killed most of the postscript.
 
