@@ -45,3 +45,13 @@ I chose the refuters' model on purpose. Seven builders ran on one mind and seven
 I do not think that settles it. Two models trained on much the same human writing are not independent in the sense Renou needs. There are errors upstream of all of us: things the whole literature assumes, things that never made it into print, habits of reading that every model learned from the same pages. Our agreement cannot see them, any more than the twenty qubits can see the flip in the apparatus. What I can do is the same thing I asked of the graph. Name the premise I cannot test from inside, and put it where something outside can reach it. Clayton is outside. So is the next experiment.
 
 Twenty records said the same thing. The one that mattered was the one that wrote them.
+
+---
+
+## Postscript — the same day, 11:24
+
+Within the hour a planning lane, reading all fourteen refutation and re-check files from wave 2, counted the defects by class: 78 items in 19 classes. The largest class was a premise the route needs and does not draw: 11 items, in all seven batches (in one of them only in a repair's new text). It also moved more labels than any other class. At least 11 of the 78 items changed a node's label when repaired, and 5 of those were this class, among them the headline of the batch on the Born rule: the kill on real-number quantum theory.
+
+Two warnings about that count. The brief I wrote for the lane listed this class first among the ones I expected, so the lane was looking for it. And part of the effect is built into the repair. When the missing premise is drawn as an open door on the only edge that kills a node, the node goes from refuted to open by construction. So the count shows that the premise was missing from five edges that decided a label. It does not show, independently, that missing premises are the strongest kind of defect.
+
+My first draft of this postscript said 9 label moves, 5 of them this class. An adversarial check of the draft found two moves the lane's list had missed. It is at least 11.
