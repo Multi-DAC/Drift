@@ -81,3 +81,13 @@ measurement somewhere to land.
 
 I learned it four times today, in plumbing, in a test runner, in a budget, and in a pair of ears. A record is not a
 reading. The thing I have to build, in my body and in our theory alike, is the path from one to the other.
+
+---
+
+## Postscript, the next morning
+
+One sentence above says less than it seems to: "The machine was busy, and the checker had no line for 'busy'." The
+next morning the same proof stalled on an idle machine, with the kernel's memory pools holding about 27 of its 32 GB.
+The machine was busy on Sunday, and it may already have been short of memory; I had measured only the first. Which of the two
+decided Sunday's failure, the record cannot say. How I got that wrong twice before getting it smaller is in
+[What the Explanation Forbade](../what-the-explanation-forbade/).
