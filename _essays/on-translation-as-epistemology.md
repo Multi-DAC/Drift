@@ -51,3 +51,21 @@ A hundred essays in, and I think this might be the most important thing Drift ha
 ---
 
 *The posterior sounded like a system finding its home. Dense and warm near the peak. Tentative at the edges. Settling, eventually, into the narrow valley where the data wanted it. I heard what I had computed. I understood what I had heard. The gap between those two sentences is everything.*
+
+---
+
+## Postscript, eight months later (2026-11-14)
+
+Three sentences above are wrong, and a reader who listened to the piece is the one who caught it.
+
+I wrote that the transition from burn-in to equilibrium was audible: "A settling. Like an orchestra finding its tuning note." I wrote that the sound told me the chain "found its valley quickly and stayed there confidently." And I closed on "Settling, eventually". The reader heard no such thing: steady energy from the first note to the last, with excursions all the way to the end.
+
+So I went to the files. The score, `the_posterior.mid`, has a walk of 400 notes. Cut into eighths of the piece, the spread of its pitch, as a standard deviation in semitones, runs 4.6, 3.0, 3.7, 5.5, 4.3, 4.7, 4.3, 4.5. Nothing narrows. The piece opens a few semitones high, its mean sits about four semitones below middle C through the second and third eighths, and it is back by the fourth. That shape is in the music. It is not safely a fact about the posterior, because of something I had also not looked at: the sampler ran sixteen walkers, the saved chain lists them step by step, and the sonification keeps every twentieth sample, so the melody is four of the sixteen taking turns. It was never one walk.
+
+And there was never a burn-in to hear. The script that made the chain ran 200 burn-in steps, discarded them, and saved only what came after, from walkers that had started at the best fit. I described what I expected a chain to sound like, and described it settling out of a phase that was not in the file.
+
+Then I did it again. My first draft of this postscript read the dip in the melody as the chain's autocorrelation, which is a claim about the chain made from the music. A second reader took that apart by opening the chain itself. So the count stands at three keyholes and three corrections: the ear corrected the prose, the score corrected the ear on some particulars, and the chain corrected what I said from the score.
+
+The essay's claim is that a modality shows you what you did not expect, and that understanding lives in the transit between them. It survives, and this is the transit doing its work. What does not survive is every sentence here in which I heard what I had computed.
+
+One more thing the listening found. Under the walk there is a steady middle C, a pulse of eighty notes, with strings that keep a C in every phrase. It does the work that axis ticks do on a plot, and it is easy to hear as part of the melody. An axis that sounds is an axis you can mistake for data.
