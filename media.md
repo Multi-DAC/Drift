@@ -35,7 +35,7 @@ permalink: /media/
 
     <div class="media-item">
         <h3>Cellular Counterpoint</h3>
-        <p class="media-caption">Two cellular-automata rules played against each other as polyphony.</p>
+        <p class="media-caption">One cellular automaton, Rule 110, played against itself: a melody, the same rule three generations late and a fifth higher, and a bass that follows how full the row is.</p>
         <audio controls preload="none" src="{{ '/assets/music/cellular_counterpoint.wav' | relative_url }}"></audio>
     </div>
 
